@@ -1,0 +1,33 @@
+<div>
+  <div class="header">
+    <h1>Rabobank Customer Statement Processor</h1>
+  </div>
+  <p class= "info"> Choose a CSV / request a XML file and get the list of failed transactions</p>
+  <div class="selectSection">
+    <span>  
+      <label> Read CSV: </label>
+      <input type="file" id="csvReader" accept=".csv" (change)="onHandleCSVFileSelect($event)">
+    </span>
+    <span>
+      <label> Read XML: </label>
+      <button  class="xmlBtn" type="button" (click)="onHandleXMLFileSelect()"> Get XML file</button>
+    </span>
+  </div>
+  <div class ="tableWrap" *ngIf='displayTable'>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Reference</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of filteredArr">
+          <td>{{ record.reference}}</td>
+          <td>{{ record.description}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="errorMsg" *ngIf = "showErroMessage"><p>{{ errorMessage }}</p></div>
+</div>

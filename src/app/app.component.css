@@ -1,0 +1,87 @@
+
+.header {
+    color: white;
+    padding: 0px 26% 0;
+    background: blue;
+}
+
+.info {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 800;
+    color: royalblue;
+}
+
+.selectSection {
+    padding: 0px 29% 0;
+    font-size: 17px;
+    font-style: normal;
+}
+
+.tableWrap {
+    width: 84%;
+}
+table {
+  border-collapse: collapse;
+  width: 66%;
+  margin: 2% 1% 1% 29%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: lightgray}
+
+th {
+  background-color: darkslateblue;
+  color: white;
+}
+
+.errorMsg {
+    text-align: center;
+    font-size: xx-large;
+    color: red;
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0px 3% 0;
+        font-size: 10px;
+    }
+
+    .selectSection {
+        font-size: 15px;
+    }
+
+    .selectSection span{
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .table {
+        width: 100%;
+        margin: 4% 0% 2% 12%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .header {
+        padding: 0px 14% 0;
+    }
+
+    .info {
+        font-size: 25px;
+    }
+
+    .selectSection span{
+        display: block;
+        margin-bottom: 10px;
+        font-size: 27px;
+    }
+    
+    .table {
+        font-size: 23px;
+    }
+}
